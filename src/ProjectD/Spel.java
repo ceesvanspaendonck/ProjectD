@@ -38,11 +38,12 @@ public class Spel
             {
                 Tegel tegel = new Tegel(x, y);
                 doolhof.tegels[x][y] = tegel;
+                frame.add(tegel); //hierdoor komt er geen window meer, maar als deze tegel nou spawnd op coordinaten uit de for loop hebben we een grid?
             }
         }
         
         //maak de speler en voeg toe aan frame
-        Speler speler = new Speler(0, 0); 
+        Speler speler = new Speler(0, 0);
         frame.add(speler);
         
         //maak keylistener en voeg toe aan frame
