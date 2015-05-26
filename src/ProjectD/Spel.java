@@ -32,13 +32,16 @@ public class Spel
         
         
         //maak de grid, array[][] van tegels
-        for (int x = 0; x < width; x++)
+        for (int x = 0; x < width; x = x + 50)
         {
-            for (int y = 0; y < heigth; y++)
+            for (int y = 0; y < heigth; y = y + 50)
             {
+                System.out.print(x + ", " + y);
                 Tegel tegel = new Tegel(x, y);
                 doolhof.tegels[x][y] = tegel;
+                tegel.drawComponent(x, y);  
                 frame.add(tegel); //hierdoor komt er geen window meer, maar als deze tegel nou spawnd op coordinaten uit de for loop hebben we een grid?
+                System.out.println(" - getekend");
             }
         }
         

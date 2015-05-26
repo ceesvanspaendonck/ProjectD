@@ -19,7 +19,7 @@ public class Tegel extends JPanel
     {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g; 
-        Rectangle box = new Rectangle(x, y, 10, 10);
+        Rectangle box = new Rectangle(x + 25, y, 10, 10);
         g2.draw(box);
         
     }
