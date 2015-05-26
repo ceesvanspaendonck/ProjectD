@@ -12,7 +12,7 @@ import javax.swing.JPanel;
  */
 public class Spel
 {
-    //yo
+    //yooo
     public JPanel panel = new JPanel();
     public static void main(String[] args)
     {
