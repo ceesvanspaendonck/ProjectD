@@ -30,6 +30,15 @@ public class Spel
         //maak het doolhof
         Doolhof doolhof = new Doolhof(width, heigth);
         
+        for (int i = 0; i < heigth; i++)
+        {
+            for (int j = 0; j < width; j++)
+            {
+                
+            }
+        }
+        frame.add(doolhof.grid);
+        
         //maak de speler en voeg toe aan frame
         Speler speler = new Speler(0, 0); 
         frame.add(speler);
