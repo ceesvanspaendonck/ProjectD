@@ -30,14 +30,16 @@ public class Spel
         //maak het doolhof
         Doolhof doolhof = new Doolhof(width, heigth);
         
-        for (int i = 0; i < heigth; i++)
+        
+        //maak de grid, array[][] van tegels
+        for (int x = 0; x < width; x++)
         {
-            for (int j = 0; j < width; j++)
+            for (int y = 0; y < heigth; y++)
             {
-                
+                Tegel tegel = new Tegel(x, y);
+                doolhof.tegels[x][y] = tegel;
             }
         }
-        frame.add(doolhof.grid);
         
         //maak de speler en voeg toe aan frame
         Speler speler = new Speler(0, 0); 
