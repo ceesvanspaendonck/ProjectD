@@ -16,32 +16,29 @@ public class Spel
     public JPanel panel = new JPanel();
     public static void main(String[] args)
     {
+        //set grootte van het doolhof
         int width = 500;
-        int heigth = 750;
+        int heigth = 500;
         
+        //maak het frame
         JFrame frame = new JFrame();
         frame.setSize(width,heigth);
         frame.setTitle("Doolhof");
         frame.setPreferredSize(new Dimension(width, heigth));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        //JPanel panel = new JPanel();
-        //panel.setSize(1000, 1000);
+        //maak het doolhof
+        Doolhof doolhof = new Doolhof(width, heigth);
         
-        //frame.add(panel);
-        
+        //maak de speler en voeg toe aan frame
         Speler speler = new Speler(0, 0); 
-        
-        //panel.add(speler);
-        
         frame.add(speler);
         
-        //JComponent doolhof = new Doolhof();
-        
-        KeyListener listener = new Input(speler);
-        
+        //maak keylistener en voeg toe aan frame
+        KeyListener listener = new Input(speler);        
         frame.addKeyListener(listener);
         
+        //open frame
         frame.setVisible (true);
     }
 }
